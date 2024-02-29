@@ -7,7 +7,6 @@ default:
   AWS_SECRET_ACCESS_KEY: "{{ env_var('AWS_SECRET_ACCESS_KEY') }}"
   AWS_SESSION_TOKEN: session_token (Used to generate Redshift credentials)
   AWS_REGION: region
-
   # Algolia
   ALGOLIA_APP_ID: app_id
   ALGOLIA_API_KEY: api_key
@@ -50,12 +49,6 @@ default:
     client_x509_cert_url: "https://www.googleapis.com/robot/v1/metadata/x509/your_service_account_email"
   GOOGLE_SERVICE_ACC_KEY_FILEPATH: "/path/to/your/service/account/key.json"
   GOOGLE_LOCATION: US # Optional
-  # MinIO
-  MINIO_ACCESS_KEY: "{{ env_var('MINIO_ACCESS_KEY') }}"
-  MINIO_SECRET_KEY: "{{ env_var('MINIO_SECRET_KEY') }}"
-  MINIO_REGION: "{{ env_var('MINIO_REGION') }}"
-  MINIO_ENDPOINT: "{{ env_var('MINIO_ENDPOINT') }}"
-
   # MongoDB
   # Specify either the connection string or the (host, password, user, port) to connect to MongoDB.
   MONGODB_CONNECTION_STRING: "mongodb://{username}:{password}@{host}:{port}/"
