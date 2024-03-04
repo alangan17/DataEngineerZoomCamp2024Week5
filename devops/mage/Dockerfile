@@ -8,6 +8,8 @@ FROM mageai/mageai:0.9.65
 ## 3. Kerberos Client for Windows Active Directory Authentication
 ## 4. DuckDB CLI
 ## 5. AzCopy (For file between Local Storage and Azure Blob Storage)
+## 6. Spark and JAVA
+## 7. Install custom Python libraries (with uv)
 
 ENV DEBIAN_FRONTEND=noninteractive
 
@@ -91,7 +93,24 @@ WORKDIR /opt/init_scripts
 #     ; fi
 # RUN apt-get cleanx
 
-## Install custom Python libraries (with uv)
+## 6. Spark and Java
+##W set the working directory
+WORKDIR /root/spark
+### Install Java
+RUN apt-get install -y default-jdk
+RUN export JAVA_HOME="${HOME}/spark/jdk-11.0.2"
+RUN export PATH="${JAVA_HOME}/bin:${PATH}"
+
+### Install Spark
+RUN wget https://archive.apache.org/dist/spark/spark-3.3.2/spark-3.3.2-bin-hadoop3.tgz
+RUN tar xzfv spark-3.3.2-bin-hadoop3.tgz
+RUN rm spark-3.3.2-bin-hadoop3.tgz
+RUN export SPARK_HOME="${HOME}/spark/spark-3.3.2-bin-hadoop3"
+RUN export PATH="${SPARK_HOME}/bin:${PATH}"
+
+## 7. Install custom Python libraries (with uv)
+##W set the working directory
+WORKDIR /opt/init_scripts
 ENV VIRTUAL_ENV=/usr/local
 RUN pip3 install uv
 RUN uv pip install --no-cache -r /opt/init_scripts/${PIPENVFILE}

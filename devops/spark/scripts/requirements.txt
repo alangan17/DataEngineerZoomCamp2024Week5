@@ -1,9 +1,9 @@
-mage-ai==0.9.64
+# mage-ai==0.9.64
 
 ## data transformation
 # dbt-core==1.4.5
 # dbt-sqlserver==1.7.2
-sqlfluff-templater-dbt==2.3.3
+# sqlfluff-templater-dbt==2.3.3
 
 # orchestration
 # prefect==2.14.3
@@ -17,7 +17,7 @@ sqlfluff-templater-dbt==2.3.3
 # adlfs==2023.4.0
 ## MinIO
 ## https://github.com/minio/minio-py
-minio==7.2.4
+# minio==7.2.4
 
 ## manipulate excel files
 # openpyxl==3.0.10
@@ -34,6 +34,3 @@ minio==7.2.4
 # beautifulsoup4==4.12.2
 # webdriver_manager==4.0.0
 # lxml
-
-# PySpark
-pyspark==3.4.1
