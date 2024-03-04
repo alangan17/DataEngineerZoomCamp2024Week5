@@ -17,8 +17,17 @@ mindmap
 #### 4. Advantages and disadvantages of Batch jobs
 
 ### 2. Spark Introduction
+- What is Apache Spark?
+  - Data Processing Engine for batch and streaming jobs
+  - Support different languages
+    -  Java
+    -  Scala
+    -  Python
+    -  R
+- When to use Spark?
+  - dataset that you cannot be handled in SQL (e.g. Machine Learning)
 
-### 3. Installing Spark
+### 3. [Installing Spark](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/05-batch/setup/pyspark.md)
 
 ### 4. First look at Spark/ PySpark
 
