@@ -62,7 +62,7 @@ For this homework we will be using the FHV 2019-10 data found here. [FHV Data](h
 - Create a local spark session
 - Execute spark.version.
 
-What's the output?
+What's the output? 3.4.1
 
 > [!NOTE]
 > To install PySpark follow this [guide](https://github.com/DataTalksClub/data-engineering-zoomcamp/blob/main/05-batch/setup/pyspark.md)
